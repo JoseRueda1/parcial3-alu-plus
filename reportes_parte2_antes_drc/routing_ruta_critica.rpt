@@ -1,0 +1,132 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Mon Oct 19 16:17:15 2026
+| Host         : LAPTOP-JOSE running 64-bit major release  (build 9200)
+| Command      : report_timing -max_paths 1 -path_type full_clock_expanded -file {C:/Users/Jos Rueda/fsm_semaforo_sv/alu_p3/reportes_parte2/routing_ruta_critica.rpt}
+| Design       : alu_sync
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             12.943ns  (required time - arrival time)
+  Source:                 b_r_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            z_reg/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk rise@40.000ns - clk rise@0.000ns)
+  Data Path Delay:        27.023ns  (logic 7.273ns (26.915%)  route 19.750ns (73.085%))
+  Logic Levels:           31  (LUT2=6 LUT3=5 LUT4=4 LUT5=8 LUT6=8)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.846ns = ( 44.846 - 40.000 ) 
+    Source Clock Delay      (SCD):    5.150ns
+    Clock Pessimism Removal (CPR):    0.274ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=55, routed)          1.629     5.150    clk_IBUF_BUFG
+    SLICE_X1Y17          FDCE                                         r  b_r_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y17          FDCE (Prop_fdce_C_Q)         0.456     5.606 r  b_r_reg[1]/Q
+                         net (fo=18, routed)          1.156     6.762    u_alu/u_mul/b[1]
+    SLICE_X4Y20          LUT2 (Prop_lut2_I1_O)        0.154     6.916 r  u_alu/u_mul/fila[1].sumador_i_29/O
+                         net (fo=4, routed)           0.867     7.783    u_alu/u_mul/fila[1].sumador/b[1]
+    SLICE_X4Y20          LUT4 (Prop_lut4_I0_O)        0.355     8.138 r  u_alu/u_mul/fila[1].sumador/sum[1]_INST_0/O
+                         net (fo=5, routed)           0.647     8.785    u_alu/u_mul/fila[2].sumador/a[0]
+    SLICE_X6Y20          LUT6 (Prop_lut6_I0_O)        0.332     9.117 r  u_alu/u_mul/fila[2].sumador/sum[3]_INST_0_i_1/O
+                         net (fo=3, routed)           1.208    10.325    u_alu/u_mul/fila[2].sumador/sum[3]_INST_0_i_1_n_0
+    SLICE_X11Y22         LUT5 (Prop_lut5_I4_O)        0.152    10.477 r  u_alu/u_mul/fila[2].sumador/sum[13]_INST_0_i_5/O
+                         net (fo=3, routed)           0.894    11.371    u_alu/u_mul/fila[2].sumador/sum[13]_INST_0_i_5_n_0
+    SLICE_X10Y22         LUT3 (Prop_lut3_I0_O)        0.354    11.725 r  u_alu/u_mul/fila[2].sumador/sum[5]_INST_0/O
+                         net (fo=3, routed)           0.443    12.169    u_alu/u_mul/fila[3].sumador/a[4]
+    SLICE_X10Y21         LUT5 (Prop_lut5_I0_O)        0.348    12.517 r  u_alu/u_mul/fila[3].sumador/sum[6]_INST_0_i_2/O
+                         net (fo=3, routed)           0.587    13.103    u_alu/u_mul/fila[3].sumador/sum[6]_INST_0_i_2_n_0
+    SLICE_X10Y22         LUT4 (Prop_lut4_I3_O)        0.124    13.227 r  u_alu/u_mul/fila[3].sumador/sum[5]_INST_0/O
+                         net (fo=2, routed)           0.557    13.785    u_alu/u_mul/fila[4].sumador/a[4]
+    SLICE_X10Y19         LUT5 (Prop_lut5_I4_O)        0.116    13.901 r  u_alu/u_mul/fila[4].sumador/sum[6]_INST_0_i_1/O
+                         net (fo=3, routed)           0.483    14.384    u_alu/u_mul/fila[4].sumador/p_0_in0_in[5]
+    SLICE_X10Y19         LUT3 (Prop_lut3_I0_O)        0.328    14.712 f  u_alu/u_mul/fila[4].sumador/sum[5]_INST_0/O
+                         net (fo=3, routed)           0.736    15.448    u_alu/u_mul/fila[5].sumador/a[4]
+    SLICE_X11Y18         LUT5 (Prop_lut5_I0_O)        0.124    15.572 r  u_alu/u_mul/fila[5].sumador/sum[6]_INST_0_i_1/O
+                         net (fo=3, routed)           0.778    16.350    u_alu/u_mul/fila[5].sumador/sum[6]_INST_0_i_1_n_0
+    SLICE_X11Y19         LUT4 (Prop_lut4_I1_O)        0.124    16.474 r  u_alu/u_mul/fila[5].sumador/sum[5]_INST_0/O
+                         net (fo=2, routed)           0.797    17.272    u_alu/u_mul/fila[6].sumador/a[4]
+    SLICE_X9Y17          LUT5 (Prop_lut5_I4_O)        0.150    17.422 r  u_alu/u_mul/fila[6].sumador/sum[6]_INST_0_i_1/O
+                         net (fo=3, routed)           0.792    18.214    u_alu/u_mul/fila[6].sumador/sum[6]_INST_0_i_1_n_0
+    SLICE_X9Y19          LUT5 (Prop_lut5_I0_O)        0.352    18.566 r  u_alu/u_mul/fila[6].sumador/sum[9]_INST_0_i_2/O
+                         net (fo=3, routed)           0.604    19.170    u_alu/u_mul/fila[6].sumador/sum[9]_INST_0_i_2_n_0
+    SLICE_X9Y18          LUT3 (Prop_lut3_I2_O)        0.326    19.496 r  u_alu/u_mul/fila[6].sumador/sum[7]_INST_0/O
+                         net (fo=3, routed)           0.500    19.996    u_alu/u_mul/fila[7].sumador/a[6]
+    SLICE_X9Y17          LUT5 (Prop_lut5_I0_O)        0.124    20.120 r  u_alu/u_mul/fila[7].sumador/sum[8]_INST_0_i_2/O
+                         net (fo=2, routed)           0.436    20.557    u_alu/u_mul/fila[7].sumador/sum[8]_INST_0_i_2_n_0
+    SLICE_X8Y17          LUT6 (Prop_lut6_I4_O)        0.124    20.681 r  u_alu/u_mul/fila[7].sumador/sum[8]_INST_0/O
+                         net (fo=1, routed)           0.525    21.206    u_alu/u_mul/fila[8].sumador/a[7]
+    SLICE_X6Y17          LUT2 (Prop_lut2_I0_O)        0.124    21.330 r  u_alu/u_mul/fila[8].sumador/sum[7]_INST_0_i_4/O
+                         net (fo=1, routed)           0.437    21.767    u_alu/u_mul/fila[8].sumador/sum[7]_INST_0_i_4_n_0
+    SLICE_X5Y16          LUT6 (Prop_lut6_I5_O)        0.124    21.891 r  u_alu/u_mul/fila[8].sumador/sum[7]_INST_0/O
+                         net (fo=1, routed)           0.778    22.669    u_alu/u_mul/fila[9].sumador/a[6]
+    SLICE_X5Y18          LUT6 (Prop_lut6_I0_O)        0.124    22.793 r  u_alu/u_mul/fila[9].sumador/sum[6]_INST_0/O
+                         net (fo=1, routed)           0.636    23.429    u_alu/u_mul/fila[10].sumador/a[5]
+    SLICE_X5Y19          LUT2 (Prop_lut2_I1_O)        0.149    23.578 r  u_alu/u_mul/fila[10].sumador/sum[5]_INST_0_i_2/O
+                         net (fo=1, routed)           0.417    23.995    u_alu/u_mul/fila[10].sumador/p_0_in28_in
+    SLICE_X3Y19          LUT6 (Prop_lut6_I5_O)        0.332    24.327 r  u_alu/u_mul/fila[10].sumador/sum[5]_INST_0/O
+                         net (fo=1, routed)           0.797    25.124    u_alu/u_mul/fila[11].sumador/a[4]
+    SLICE_X3Y21          LUT5 (Prop_lut5_I3_O)        0.152    25.276 r  u_alu/u_mul/fila[11].sumador/sum[4]_INST_0/O
+                         net (fo=1, routed)           0.358    25.634    u_alu/u_mul/fila[12].sumador/a[3]
+    SLICE_X2Y21          LUT3 (Prop_lut3_I1_O)        0.332    25.966 r  u_alu/u_mul/fila[12].sumador/sum[3]_INST_0/O
+                         net (fo=1, routed)           0.429    26.395    u_alu/u_mul/fila[13].sumador/a[2]
+    SLICE_X2Y22          LUT6 (Prop_lut6_I4_O)        0.124    26.519 r  u_alu/u_mul/fila[13].sumador/sum[2]_INST_0/O
+                         net (fo=1, routed)           0.645    27.164    u_alu/u_mul/fila[14].sumador/a[1]
+    SLICE_X1Y22          LUT4 (Prop_lut4_I2_O)        0.152    27.316 r  u_alu/u_mul/fila[14].sumador/sum[1]_INST_0/O
+                         net (fo=1, routed)           0.266    27.582    u_alu/u_mul/fila[15].sumador/a[0]
+    SLICE_X1Y22          LUT2 (Prop_lut2_I1_O)        0.332    27.914 f  u_alu/u_mul/fila[15].sumador/sum[0]_INST_0/O
+                         net (fo=1, routed)           0.544    28.458    u_alu/m2/d0[15]
+    SLICE_X1Y24          LUT2 (Prop_lut2_I0_O)        0.118    28.576 f  u_alu/m2/y[15]_INST_0/O
+                         net (fo=1, routed)           0.652    29.228    u_alu/m3/d0[15]
+    SLICE_X1Y24          LUT2 (Prop_lut2_I0_O)        0.354    29.582 f  u_alu/m3/y[15]_INST_0/O
+                         net (fo=1, routed)           0.812    30.394    u_alu/m4/d1[15]
+    SLICE_X1Y24          LUT3 (Prop_lut3_I0_O)        0.362    30.756 f  u_alu/m4/y[15]_INST_0/O
+                         net (fo=3, routed)           0.493    31.248    u_alu/result[15]
+    SLICE_X0Y25          LUT6 (Prop_lut6_I4_O)        0.327    31.575 r  u_alu/z_INST_0_i_1/O
+                         net (fo=1, routed)           0.474    32.049    u_alu/z_INST_0_i_1_n_0
+    SLICE_X0Y22          LUT6 (Prop_lut6_I0_O)        0.124    32.173 r  u_alu/z_INST_0/O
+                         net (fo=1, routed)           0.000    32.173    z_w
+    SLICE_X0Y22          FDCE                                         r  z_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       40.000    40.000 r  
+    W5                                                0.000    40.000 r  clk (IN)
+                         net (fo=0)                   0.000    40.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    43.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    43.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=55, routed)          1.505    44.846    clk_IBUF_BUFG
+    SLICE_X0Y22          FDCE                                         r  z_reg/C
+                         clock pessimism              0.274    45.120    
+                         clock uncertainty           -0.035    45.085    
+    SLICE_X0Y22          FDCE (Setup_fdce_C_D)        0.031    45.116    z_reg
+  -------------------------------------------------------------------
+                         required time                         45.116    
+                         arrival time                         -32.173    
+  -------------------------------------------------------------------
+                         slack                                 12.943    
+
+
+
+

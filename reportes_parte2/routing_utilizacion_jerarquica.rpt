@@ -1,0 +1,33 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Mon Oct 19 22:01:41 2026
+| Host         : LAPTOP-JOSE running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file {C:/Users/Jos Rueda/fsm_semaforo_sv/alu_p3/reportes_parte2/routing_utilizacion_jerarquica.rpt}
+| Design       : alu_sync
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Routed
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------+------------+------------+------------+---------+------+-----+--------+--------+------------+
+|    Instance   |   Module   | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++---------------+------------+------------+------------+---------+------+-----+--------+--------+------------+
+| alu_sync      |      (top) |        346 |        346 |       0 |    0 |  55 |      0 |      0 |          0 |
+|   (alu_sync)  |      (top) |          0 |          0 |       0 |    0 |  55 |      0 |      0 |          0 |
+|   u_alu       |        alu |        346 |        346 |       0 |    0 |   0 |      0 |      0 |          0 |
+|     u_mul     | multiplier |        251 |        251 |       0 |    0 |   0 |      0 |      0 |          0 |
+|       (u_mul) | multiplier |         72 |         72 |       0 |    0 |   0 |      0 |      0 |          0 |
++---------------+------------+------------+------------+---------+------+-----+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

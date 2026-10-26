@@ -1,0 +1,139 @@
+[jrueda@synopsys-unis parcial3-alu-plus]$ cd ~/parcial3-alu-plus/m31
+tar xzf M31LLSC750GL150MS_00.01.000/*milkyway_techfiles.tgz -C kit
+cd kit/M31LLSC750GL150MS.0.01
+ls lef lef_techfiles/tech milkyway_techfiles/tech
+lef:
+M31LLSC750GL150MS.lef
+
+lef_techfiles/tech:
+GL150M_3M1T_11K.lef  GL150M_3M1T_9K.lef  GL150M_4M1T_11K.lef  GL150M_4M1T_9K.lef  GL150M_5M1T_11K.lef  GL150M_5M1T_9K.lef
+
+milkyway_techfiles/tech:
+GL150M_3M1T_11K.tf  GL150M_3M1T_9K.tf  GL150M_4M1T_11K.tf  GL150M_4M1T_9K.tf  GL150M_5M1T_11K.tf  GL150M_5M1T_9K.tf
+[jrueda@synopsys-unis M31LLSC750GL150MS.0.01]$ grep -E "^ *(LAYER|DIRECTION|PITCH) " lef_techfiles/tech/GL150M_5M1T_9K.lef | head -60
+LAYER POLY2
+LAYER CNT
+LAYER METAL1
+  DIRECTION HORIZONTAL ;
+  PITCH 0.48 ;
+LAYER VIA1
+LAYER METAL2
+  DIRECTION VERTICAL ;
+  PITCH 0.48 ;
+LAYER VIA2
+LAYER METAL3
+  DIRECTION HORIZONTAL ;
+  PITCH 0.48 ;
+LAYER VIA3
+LAYER METAL4
+  DIRECTION VERTICAL ;
+  PITCH 0.48 ;
+LAYER VIA4
+LAYER METAL5
+  DIRECTION HORIZONTAL ;
+  PITCH 0.77 ;
+LAYER OVERLAP
+  LAYER METAL1 ;
+  LAYER VIA1 ;
+  LAYER METAL2 ;
+  LAYER METAL1 ;
+  LAYER VIA1 ;
+  LAYER METAL2 ;
+  LAYER METAL1 ;
+  LAYER VIA1 ;
+  LAYER METAL2 ;
+  LAYER METAL1 ;
+  LAYER VIA1 ;
+  LAYER METAL2 ;
+  LAYER METAL2 ;
+  LAYER VIA2 ;
+  LAYER METAL3 ;
+  LAYER METAL2 ;
+  LAYER VIA2 ;
+  LAYER METAL3 ;
+  LAYER METAL2 ;
+  LAYER VIA2 ;
+  LAYER METAL3 ;
+  LAYER METAL2 ;
+  LAYER VIA2 ;
+  LAYER METAL3 ;
+  LAYER METAL3 ;
+  LAYER VIA3 ;
+  LAYER METAL4 ;
+  LAYER METAL3 ;
+  LAYER VIA3 ;
+  LAYER METAL4 ;
+  LAYER METAL3 ;
+  LAYER VIA3 ;
+  LAYER METAL4 ;
+  LAYER METAL3 ;
+  LAYER VIA3 ;
+  LAYER METAL4 ;
+  LAYER METAL4 ;
+  LAYER VIA4 ;
+[jrueda@synopsys-unis M31LLSC750GL150MS.0.01]$ grep -hE "^ *SITE|^ *SIZE" lef/*.lef lef_techfiles/tech/GL150M_5M1T_9K.lef | head -6
+grep -E "^MACRO" lef/*.lef | grep -iE "tap|fill|well|ant" | head
+grep -m4 -E "^ *PIN V|^ *PIN G" lef/*.lef
+SITE M31_CORE_7T
+   SIZE 0.48 BY 3.36 ;
+  SIZE 3.84 BY 3.36 ;
+  SITE M31_CORE_7T ;
+  SIZE 4.8 BY 3.36 ;
+  SITE M31_CORE_7T ;
+MACRO ANTENNAX1TAS7
+MACRO FILLER1TAS7
+MACRO FILLER16TAS7
+MACRO FILLER2TAS7
+MACRO FILLER32TAS7
+MACRO FILLER4TAS7
+MACRO FILLER64TAS7
+MACRO FILLER8TAS7
+MACRO FILLERC16TAS7
+MACRO FILLERC32TAS7
+  PIN GNDK
+  PIN VCCK
+  PIN GNDK
+  PIN VCCK
+[jrueda@synopsys-unis M31LLSC750GL150MS.0.01]$ cd ~/parcial3-alu-plus
+icc2_lm_shell -x "help -verbose create_workspace; exit" | tail -40
+
+                Version Y-2026.03-SP2 for linux64 - Sep 01, 2026
+                           Base build date 6/22/2026.
+
+                    Copyright (c) 1988 - 2026 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+      Inc.  This software may only be used in accordance with the terms and
+  conditions of a written license agreement with Synopsys, Inc.  All other use,
+   reproduction, or distribution of this software is strictly prohibited.  By
+   installing, accessing, using, or executing this software, you agree that it
+  will reside on, operate within, and have access to the computers and networks
+    where such software is used ("Host System"), and that Synopsys may access
+     components and data of the Host System as necessary for it to function
+ properly, to authenticate and validate license keys, to verify that it is used
+ only in conformity with the applicable license restrictions, and to communicate
+                 error messages and associated data to Synopsys.
+
+
+Invocation: /usr/synopsys/fusioncompiler/Y-2026.03-SP2/linux64/nwtn/bin/lm_shell_exec
+Execution time: Sun Oct 25 14:27:07 2026
+Host: synopsys-unis (1 x 3000.000 MHz Intel(R) Xeon(R) D-2123IT CPU @ 2.20GHz)
+Working directory: /home/jrueda/parcial3-alu-plus
+
+ create_workspace     # Create the workspace in which your library will be built
+   [-technology tech_file]
+                          (Technology file name)
+   [-flow flow_type]      (Create a library with specified flow:
+                           Values: aggregate, edit, etm_moded,
+                           exploration, frame, normal, physical_only,
+                           verification)
+   [-scale_factor precision]
+                          (Internal length precision)
+   [-use_technology_lib tech_lib_name]
+                          (Technology library name)
+   library_spec           (Name for the library, or library to edit)
+
+Maximum memory usage for this session: 94.73 MB
+CPU usage for this session:      1 seconds (  0.00 hours)
+Elapsed time for this session:      2 seconds (  0.00 hours)
+Thank you for using Library Manager.
+[jrueda@synopsys-unis parcial3-alu-plus]$

@@ -1,0 +1,261 @@
+[jrueda@synopsys-unis parcial3-alu-plus]$ cd ~/parcial3-alu-plus
+icc2_shell -f fix_fillers.tcl | tee icc2_run3.log
+
+
+
+                              IC Compiler II (TM)
+
+                Version Y-2026.03-SP2 for linux64 - Sep 01, 2026
+                           Base build date 6/22/2026.
+
+                    Copyright (c) 1988 - 2026 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+      Inc.  This software may only be used in accordance with the terms and
+  conditions of a written license agreement with Synopsys, Inc.  All other use,
+   reproduction, or distribution of this software is strictly prohibited.  By
+   installing, accessing, using, or executing this software, you agree that it
+  will reside on, operate within, and have access to the computers and networks
+    where such software is used ("Host System"), and that Synopsys may access
+     components and data of the Host System as necessary for it to function
+ properly, to authenticate and validate license keys, to verify that it is used
+ only in conformity with the applicable license restrictions, and to communicate
+                 error messages and associated data to Synopsys.
+
+
+Invocation: /usr/synopsys/icc2/Y-2026.03-SP2/linux64/nwtn/bin/icc2_exec
+Execution time: Sun Oct 25 14:47:03 2026
+Host: synopsys-unis (1 x 2856.980 MHz Intel(R) Xeon(R) D-2123IT CPU @ 2.20GHz)
+Working directory: /home/jrueda/parcial3-alu-plus
+
+# Quita los fillers que causan cortos, revisa de nuevo y regenera las salidas.
+# Se corre con:  icc2_shell -f fix_fillers.tcl | tee icc2_run3.log
+set LIBNAME lib_alu_icc2
+lib_alu_icc2
+set GDS_MAP [glob ./m31/kit/*/milkyway_techfiles/map/gds2OutLayer.map]
+./m31/kit/M31LLSC750GL150MS.0.01/milkyway_techfiles/map/gds2OutLayer.map
+set RPT ./reports_icc2
+./reports_icc2
+set OUT ./out_icc2
+./out_icc2
+proc reporte {archivo cmd} {
+  redirect -file $archivo { catch $cmd }
+}
+open_lib $LIBNAME
+Information: Loading library file '/home/jrueda/parcial3-alu-plus/lib_alu_icc2' (FILE-007)
+Information: Loading library file '/home/jrueda/parcial3-alu-plus/M31LLSC750GL150MS.ndm' (FILE-007)
+{lib_alu_icc2}
+open_block ${LIBNAME}:final.design
+Information: User units loaded from library 'M31LLSC750GL150MS' (LNK-040)
+Opening block 'lib_alu_icc2:final.design' in edit mode
+{lib_alu_icc2:final.design}
+current_block
+{lib_alu_icc2:final.design}
+catch {remove_stdcell_fillers_with_violation}
+Using libraries: lib_alu_icc2 M31LLSC750GL150MS
+Warning: In library lib_alu_icc2, no block views exist for block alu_sync_div. (LNK-064)
+Visiting block lib_alu_icc2:final.design
+Design 'alu_sync_div' was successfully linked.
+NEX(Warning): extract.rc_techfile_for_diode_mode_26_thickness not set, will igonre it
+Cut layer CNT has invalid minimum width specified
+Cell Min-Routing-Layer = METAL1
+Cell Max-Routing-Layer = METAL5
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+Warning: Cannot find a default contact code for layer CNT. (ZRT-022)
+Warning: Port GNDK of cell final is unplaced.  This may impact routing result. (ZRT-740)
+Warning: Port VCCK of cell final is unplaced.  This may impact routing result. (ZRT-740)
+Warning: Ignore 2 top cell ports with no pins. (ZRT-027)
+Info: number of net_type_blockage: 0
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Via on layer (VIA4) needs more than one tracks
+Warning: Layer METAL4 default pitch 0.480 may be too small to handle up/down via. Note, that minimum requirements are "wire/via-down 0.480" & "wire/via-up 0.520". (ZRT-026)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 8.07 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 8.07 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+Printing options for 'route.common.*'
+
+Printing options for 'route.detail.*'
+detail.antenna                                          :        false
+
+Printing options for 'route.auto_via_ladder.*'
+
+[Start Removing Filler Cells] Elapsed real time: 0:00:00
+[Start Removing Filler Cells] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Start Removing Filler Cells] Stage (MB): Used    0  Alloctr    0  Proc    0
+[Start Removing Filler Cells] Total (MB): Used    0  Alloctr    0  Proc 7755
+
+Begin Filler DRC check ...
+
+Information: Using 1 threads for routing. (ZRT-444)
+Partition 5, Fillers with Violations = 1
+Partition 4, Fillers with Violations = 0
+Partition 6, Fillers with Violations = 0
+Partition 2, Fillers with Violations = 0
+Partition 8, Fillers with Violations = 0
+Partition 1, Fillers with Violations = 1
+Partition 3, Fillers with Violations = 0
+Partition 7, Fillers with Violations = 0
+Partition 9, Fillers with Violations = 0
+[End Removing Filler Cells] Elapsed real time: 0:00:00
+[End Removing Filler Cells] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End Removing Filler Cells] Stage (MB): Used    0  Alloctr    0  Proc  192
+[End Removing Filler Cells] Total (MB): Used    0  Alloctr    0  Proc 7947
+Updating the database ...
+Delete xofiller!FILLER64TAS7!x268000y301600 due to Short violation
+Delete xofiller!FILLER64TAS7!x2149600y1880800 due to Diff net spacing violation
+Deleted 2 cell instances
+0
+catch {
+  connect_pg_net -net VCCK [get_pins -hierarchical -filter "name==VCCK"]
+  connect_pg_net -net GNDK [get_pins -hierarchical -filter "name==GNDK"]
+}
+0
+reporte $RPT/check_routes_v2.rpt {check_routes}
+reporte $RPT/check_lvs_v2.rpt {check_lvs}
+reporte $RPT/utilizacion_v2.rpt {report_utilization}
+save_block -as final_v2
+Information: Saving 'lib_alu_icc2:final.design' to 'lib_alu_icc2:final_v2.design'. (DES-028)
+1
+save_lib
+Saving library 'lib_alu_icc2'
+1
+catch {write_verilog -include {pg_netlist} $OUT/alu_sync_div_icc2.v}
+0
+catch {write_def $OUT/alu_sync_div_icc2.def}
+****************************************
+Report : Data Mismatches
+Version: Y-2026.03-SP2
+Date   : Sun Oct 25 14:47:10 2026
+****************************************
+No mismatches exist on the design.
+Information: Fill shapes with 'active_fill' purpose will be skipped from output DEF. (DEFW-032)
+---------------------------------------
+Number of Written DEF Constructs
+---------------------------------------
+VERSION                        : 1
+DIVIDERCHAR                    : 1
+BUSBITCHARS                    : 1
+DESIGN                         : 1
+UNITS                          : 1
+PROPERTYDEFINITIONS            : 1
+DIEAREA                        : 1
+ROW                            : 100
+TRACKS                         : 5
+VIAS                           : 4
+COMPONENTS                     : 8401
+PINS                           : 59
+PINPROPERTIES                  : 57
+SPECIALNETS                    : 1713
+NETS                           : 3643
+0
+catch {write_gds -hierarchy all -layer_map $GDS_MAP -units 1000 $OUT/alu_sync_div.gds}
+Warning: The user specified view ' layout' for lib-cell 'BUFX1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AOI22B2X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'FAX1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'CLKINVX1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI22X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR2X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'XOR2X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'XNOR2X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'TRIINVX1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AND2X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OR2X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AOI12X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'CLKINVX2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NAND2X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR2X2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI12X4TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NAND2X4TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI12X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI112X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI12B2X2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AOI12X2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI12B2X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'INVX1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NAND2X2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NAND2B1X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NAND3X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI12X2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NAND3B1X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'INVX2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR2X4TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AOI12B2X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'XOR3X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NAND4X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'CLKBUFX2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'BUFX2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'XNOR2X2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'CLKBUFX1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI112X2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR2B1X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AOI12B2X2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AOI22X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'MUX2X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'CLKINVX8TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OR4X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR4X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR4B1X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR3X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR3B1X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AOI112X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'DFFRBQX1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'DFFRBQX2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI112X4TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NAND4B1X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'MUX2X2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AND3X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AND4X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AND2X2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI13X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'MUX2BX1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'DFFRBQX4TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'DFFRSBQX2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'TIE1X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AOI222X1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'FILLER32TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'FILLER16TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'FILLER1TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'FILLER2TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'FILLER4TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'FILLER64TAS7' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'FILLER8TAS7' is not available. (GDS-034)
+0
+puts "##### LISTO fix_fillers"
+##### LISTO fix_fillers
+exit
+Maximum memory usage for this session: 771.09 MB
+Maximum memory usage for this session including child processes: 771.09 MB
+CPU usage for this session:     18 seconds (  0.00 hours)
+Elapsed time for this session:     18 seconds (  0.01 hours)
+Thank you for using IC Compiler II.
+[jrueda@synopsys-unis parcial3-alu-plus]$ grep -E "#####" icc2_run3.log
+tail -14 reports_icc2/check_routes_v2.rpt
+grep -iE "short|violation" reports_icc2/check_lvs_v2.rpt | head -5
+ls -la out_icc2
+puts "##### LISTO fix_fillers"
+##### LISTO fix_fillers
+
+Total number of nets = 3645, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                 0 ports without pins of 0 cells connected to 0 nets
+                                 0 ports of 0 cover cells connected to 0 non-pg nets
+Total number of DRCs = 0
+Total number of antenna violations = no antenna rules defined
+Total number of tie to rail violations = not checked
+Total number of tie to rail directly violations = not checked
+
+Total number of DRCs on METAL3 and below = 0
+
+0
+[Check Short] Stage 1   Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] Stage 1-2 Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] Stage 2   Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] Stage 2-2 Elapsed =    0:00:01, CPU =    0:00:01
+[Check Short] Stage 3   Elapsed =    0:00:01, CPU =    0:00:01
+total 6420
+drwxr-xr-x.  2 jrueda jrueda     102 Oct 25 14:40 .
+drwxr-xr-x. 30 jrueda jrueda    4096 Oct 25 14:47 ..
+-rw-r--r--.  1 jrueda jrueda 3035192 Oct 25 14:47 alu_sync_div.gds
+-rw-r--r--.  1 jrueda jrueda 3099810 Oct 25 14:47 alu_sync_div_icc2.def
+-rw-r--r--.  1 jrueda jrueda  423268 Oct 25 14:47 alu_sync_div_icc2.v
+[jrueda@synopsys-unis parcial3-alu-plus]$

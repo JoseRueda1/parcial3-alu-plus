@@ -1,0 +1,243 @@
+[jrueda@synopsys-unis parcial3-alu-plus]$ cd ~/parcial3-alu-plus/sim_vcs
+KIT=$(ls -d ~/parcial3-alu-plus/m31/kit/*/verilog)
+cat > files_gl.f << EOF
+-timescale=1ns/1ps
+-top tb_alu_sync_div
++nospecify
++notimingchecks
+$KIT/M31LLSC750GL150MS.v
+../run_dc_65ns/alu_sync_div_dc.v
+../tb/tb_alu_sync_div.sv
+EOF
+cat files_gl.f
+-timescale=1ns/1ps
+-top tb_alu_sync_div
++nospecify
++notimingchecks
+/home/jrueda/parcial3-alu-plus/m31/kit/M31LLSC750GL150MS.0.01/verilog/M31LLSC750GL150MS.v
+../run_dc_65ns/alu_sync_div_dc.v
+../tb/tb_alu_sync_div.sv
+[jrueda@synopsys-unis sim_vcs]$ vcs -full64 -sverilog -f files_gl.f -o simv_gl
+./simv_gl | tail -5
+                         Chronologic VCS (TM)
+      Version X-2025.06-SP2-6_Full64 -- Sun Oct 25 18:00:15 2026
+
+                    Copyright (c) 1991 - 2026 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '/home/jrueda/parcial3-alu-plus/m31/kit/M31LLSC750GL150MS.0.01/verilog/M31LLSC750GL150MS.v'
+Parsing design file '../run_dc_65ns/alu_sync_div_dc.v'
+Parsing design file '../tb/tb_alu_sync_div.sv'
+Top Level Modules:
+       tb_alu_sync_div
+
+Warning-[TMPO] Too many parameter overrides
+../tb/tb_alu_sync_div.sv, 15
+  The extra parameter overrides will be ignored.
+  Source info: alu_sync_div #(W, STAGES) dut( .clk (clk),  .reset (reset),  .a
+  (a),  .b (b),  .alu_control (ctrl),  .result (result),  .n (n),  .z (z),  .c
+  (c),  .v (v));
+
+
+
+Warning-[TMPO] Too many parameter overrides
+../tb/tb_alu_sync_div.sv, 15
+  The extra parameter overrides will be ignored.
+  Source info: alu_sync_div #(W, STAGES) dut( .clk (clk),  .reset (reset),  .a
+  (a),  .b (b),  .alu_control (ctrl),  .result (result),  .n (n),  .z (z),  .c
+  (c),  .v (v));
+
+
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1652
+multiplier_width16, "prefix_adder_width16_14 fila_1__sumador( .a ({net19702, acc_0__15_, n285, n307, n301, n298, n296, n294, n279, n291, n277, n276, n288, n274, n273, acc_0__1_}),  .b ({net19703, fila_1__pp_14_, n312, n284, n283, n282, n281, n280, n292, n278, n290, n289, n275, n287, n286, n272}),  .cin (net19704),  .sum ({SYNOPSYS_UNCONNECTED_1, fila_1__suma, p[1]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1657
+multiplier_width16, "prefix_adder_width16_13 fila_2__sumador( .a ({net19697, net19698, fila_1__suma}),  .b ({net19699, net19700, n352, n325, n318, n313, n306, n305, n303, n244, n300, n299, n297, n295, fila_2__pp_1_, n293}),  .cin (net19701),  .sum ({SYNOPSYS_UNCONNECTED_2, SYNOPSYS_UNCONNECTED_3, fila_2__suma, p[2]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1662
+multiplier_width16, "prefix_adder_width16_12 fila_3__sumador( .a ({net19690, net19691, net19692, fila_2__suma}),  .b ({net19693, net19694, net19695, n245, n331, n326, n321, n319, n317, n315, n310, n311, n309, n308, n304, n302}),  .cin (net19696),  .sum ({SYNOPSYS_UNCONNECTED_4, SYNOPSYS_UNCONNECTED_5, SYNOPSYS_UNCONNECTED_6, fila_3__suma, p[3]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1667
+multiplier_width16, "prefix_adder_width16_11 fila_4__sumador( .a ({net19681, net19682, net19683, net19684, fila_3__suma}),  .b ({net19685, net19686, net19687, net19688, n246, n338, n334, n332, n328, n327, n324, n323, n322, n320, n316, n314}),  .cin (net19689),  .sum ({SYNOPSYS_UNCONNECTED_7, SYNOPSYS_UNCONNECTED_8, SYNOPSYS_UNCONNECTED_9, SYNOPSYS_UNCONNECTED_10, fila_4__suma, p[4]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1672
+multiplier_width16, "prefix_adder_width16_10 fila_5__sumador( .a ({net19670, net19671, net19672, net19673, net19674, fila_4__suma}),  .b ({net19675, net19676, net19677, net19678, net19679, fila_5__pp_10_, n346, n344, n342, n340, n337, n336, n335, n333, n330, n329}),  .cin (net19680),  .sum ({SYNOPSYS_UNCONNECTED_11, SYNOPSYS_UNCONNECTED_12, SYNOPSYS_UNCONNECTED_13, SYNOPSYS_UNCONNECTED_14, SYNOPSYS_UNCONNECTED_15, fila_5__suma, p[5]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1679
+multiplier_width16, "prefix_adder_width16_9 fila_6__sumador( .a ({net19657, net19658, net19659, net19660, net19661, net19662, fila_5__suma}),  .b ({net19663, net19664, net19665, net19666, net19667, net19668, fila_6__pp_9_, n351, n350, n349, n348, n347, n345, n343, n341, n339}),  .cin (net19669),  .sum ({SYNOPSYS_UNCONNECTED_16, SYNOPSYS_UNCONNECTED_17, SYNOPSYS_UNCONNECTED_18, SYNOPSYS_UNCONNECTED_19, SYNOPSYS_UNCONNECTED_20, SYNOPSYS_UNCONNECTED_21, fila_6__suma, p[6]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1687
+multiplier_width16, "prefix_adder_width16_8 fila_7__sumador( .a ({net19642, net19643, net19644, net19645, net19646, net19647, net19648, fila_6__suma}),  .b ({net19649, net19650, net19651, net19652, net19653, net19654, net19655, fila_7__pp}),  .cin (net19656),  .sum ({SYNOPSYS_UNCONNECTED_22, SYNOPSYS_UNCONNECTED_23, SYNOPSYS_UNCONNECTED_24, SYNOPSYS_UNCONNECTED_25, SYNOPSYS_UNCONNECTED_26, SYNOPSYS_UNCONNECTED_27, SYNOPSYS_UNCONNECTED_28, fila_7__suma, p[7]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1693
+multiplier_width16, "prefix_adder_width16_7 fila_8__sumador( .a ({net19625, net19626, net19627, net19628, net19629, net19630, net19631, net19632, fila_7__suma}),  .b ({net19633, net19634, net19635, net19636, net19637, net19638, net19639, net19640, fila_8__pp}),  .cin (net19641),  .sum ({SYNOPSYS_UNCONNECTED_29, SYNOPSYS_UNCONNECTED_30, SYNOPSYS_UNCONNECTED_31, SYNOPSYS_UNCONNECTED_32, SYNOPSYS_UNCONNECTED_33, SYNOPSYS_UNCONNECTED_34, SYNOPSYS_UNCONNECTED_35, SYNOPSYS_UNCONNECTED_36, fila_8__suma, p[8]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1701
+multiplier_width16, "prefix_adder_width16_6 fila_9__sumador( .a ({net19606, net19607, net19608, net19609, net19610, net19611, net19612, net19613, net19614, fila_8__suma}),  .b ({net19615, net19616, net19617, net19618, net19619, net19620, net19621, net19622, net19623, fila_9__pp}),  .cin (net19624),  .sum ({SYNOPSYS_UNCONNECTED_37, SYNOPSYS_UNCONNECTED_38, SYNOPSYS_UNCONNECTED_39, SYNOPSYS_UNCONNECTED_40, SYNOPSYS_UNCONNECTED_41, SYNOPSYS_UNCONNECTED_42, SYNOPSYS_UNCONNECTED_43, SYNOPSYS_UNCONNECTED_44, SYNOPSYS_UNCONNECTED_45, fila_9__suma, p[9]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1710
+multiplier_width16, "prefix_adder_width16_5 fila_10__sumador( .a ({net19585, net19586, net19587, net19588, net19589, net19590, net19591, net19592, net19593, net19594, fila_9__suma}),  .b ({net19595, net19596, net19597, net19598, net19599, net19600, net19601, net19602, net19603, net19604, fila_10__pp}),  .cin (net19605),  .sum ({SYNOPSYS_UNCONNECTED_46, SYNOPSYS_UNCONNECTED_47, SYNOPSYS_UNCONNECTED_48, SYNOPSYS_UNCONNECTED_49, SYNOPSYS_UNCONNECTED_50, SYNOPSYS_UNCONNECTED_51, SYNOPSYS_UNCONNECTED_52, SYNOPSYS_UNCONNECTED_53, SYNOPSYS_UNCONNECTED_54, SYNOPSYS_UNCONNECTED_55, fila_10__suma, p[10]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1719
+multiplier_width16, "prefix_adder_width16_4 fila_11__sumador( .a ({net19562, net19563, net19564, net19565, net19566, net19567, net19568, net19569, net19570, net19571, net19572, fila_10__suma}),  .b ({net19573, net19574, net19575, net19576, net19577, net19578, net19579, net19580, net19581, net19582, net19583, fila_11__pp}),  .cin (net19584),  .sum ({SYNOPSYS_UNCONNECTED_56, SYNOPSYS_UNCONNECTED_57, SYNOPSYS_UNCONNECTED_58, SYNOPSYS_UNCONNECTED_59, SYNOPSYS_UNCONNECTED_60, SYNOPSYS_UNCONNECTED_61, SYNOPSYS_UNCONNECTED_62, SYNOPSYS_UNCONNECTED_63, SYNOPSYS_UNCONNECTED_64, SYNOPSYS_UNCONNECTED_65, SYNOPSYS_UNCONNECTED_66, fila_11__suma, p[11]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1729
+multiplier_width16, "prefix_adder_width16_3 fila_12__sumador( .a ({net19537, net19538, net19539, net19540, net19541, net19542, net19543, net19544, net19545, net19546, net19547, net19548, fila_11__suma}),  .b ({net19549, net19550, net19551, net19552, net19553, net19554, net19555, net19556, net19557, net19558, net19559, net19560, fila_12__pp}),  .cin (net19561),  .sum ({SYNOPSYS_UNCONNECTED_67, SYNOPSYS_UNCONNECTED_68, SYNOPSYS_UNCONNECTED_69, SYNOPSYS_UNCONNECTED_70, SYNOPSYS_UNCONNECTED_71, SYNOPSYS_UNCONNECTED_72, SYNOPSYS_UNCONNECTED_73, SYNOPSYS_UNCONNECTED_74, SYNOPSYS_UNCONNECTED_75, SYNOPSYS_UNCONNECTED_76, SYNOPSYS_UNCONNECTED_77, SYNOPSYS_UNCONNECTED_78, fila_12__suma, p[12]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1740
+multiplier_width16, "prefix_adder_width16_2 fila_13__sumador( .a ({net19510, net19511, net19512, net19513, net19514, net19515, net19516, net19517, net19518, net19519, net19520, net19521, net19522, fila_12__suma}),  .b ({net19523, net19524, net19525, net19526, net19527, net19528, net19529, net19530, net19531, net19532, net19533, net19534, net19535, fila_13__pp}),  .cin (net19536),  .sum ({SYNOPSYS_UNCONNECTED_79, SYNOPSYS_UNCONNECTED_80, SYNOPSYS_UNCONNECTED_81, SYNOPSYS_UNCONNECTED_82, SYNOPSYS_UNCONNECTED_83, SYNOPSYS_UNCONNECTED_84, SYNOPSYS_UNCONNECTED_85, SYNOPSYS_UNCONNECTED_86, SYNOPSYS_UNCONNECTED_87, SYNOPSYS_UNCONNECTED_88, SYNOPSYS_UNCONNECTED_89, SYNOPSYS_UNCONNECTED_90, SYNOPSYS_UNCONNECTED_91, fila_13__suma, p[13]}));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1752
+multiplier_width16, "prefix_adder_width16_1 fila_14__sumador( .a ({net19481, net19482, net19483, net19484, net19485, net19486, net19487, net19488, net19489, net19490, net19491, net19492, net19493, net19494, fila_13__suma}),  .b ({net19495, net19496, net19497, net19498, net19499, net19500, net19501, net19502, net19503, net19504, net19505, net19506, net19507, net19508, fila_14__pp}),  .cin (net19509),  .sum ({SYNOPSYS_UNCONNECTED_92, SYNOPSYS_UNCONNECTED_93, SYNOPSYS_UNCONNECTED_94, SYNOPSYS_UNCONNECTED_95, SYNOPSYS_UNCONNECTED_96, SYNOPSYS_UNCONNECTED_97, SYNOPSYS_UNCONNECTED_98, SYNOPSYS_UNCONNECTED_99, SYNOPSYS_UNCONNECTED_100, SYNOPSYS_UNCONNECTED_101, SYNOPSYS_UNCONNECTED_102, SYNOPSYS_UNCONNECTED_103, SYNOPSYS_UNCONNECTED_104, SYNOPSYS_UNCONNECTED_105, fila_14__suma_1_, ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../run_dc_65ns/alu_sync_div_dc.v, 1765
+multiplier_width16, "prefix_adder_width16_0 fila_15__sumador( .a ({net19450, net19451, net19452, net19453, net19454, net19455, net19456, net19457, net19458, net19459, net19460, net19461, net19462, net19463, net19464, fila_14__suma_1_}),  .b ({net19465, net19466, net19467, net19468, net19469, net19470, net19471, net19472, net19473, net19474, net19475, net19476, net19477, net19478, net19479, fila_15__pp_0_}),  .cin (net19480),  .sum ({SYNOPSYS_UNCONNECTED_106, SYNOPSYS_UNCONNECTED_107, SYNOPSYS_UNCONNECTED_108, SYNOPSYS_UNCONNECTED_109, SYNOPSYS_UNCONNECTED_110, SYNOPSYS_UNCONNECTED_111, SYNOPSYS_UNCONNECTED_112, SYNOPSYS_UNCONNECTED_113, SYNOPSYS_UNCONNECTED_114, SYNOPSYS_UNCONNECTED_115, SYNOPSYS_UNCONNECTED_116, SYNOPSYS_UNCONNECTED_117, SYNOPSYS_UNCONNECTED_118, SYNOPSYS_ ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected
+  ports.
+
+Starting vcs inline pass...
+45 modules and 5 UDPs read.
+recompiling module AND2X2TAS7
+recompiling module AND3X1TAS7
+recompiling module AOI112X1TAS7
+recompiling module AOI12B2X2TAS7
+recompiling module AOI12X2TAS7
+recompiling module AOI222X1TAS7
+recompiling module AOI22B2X1TAS7
+recompiling module AOI22X1TAS7
+recompiling module CLKBUFX2TAS7
+recompiling module DFFRBQX4TAS7
+recompiling module FAX1TAS7
+recompiling module INVX2TAS7
+recompiling module MUX2X2TAS7
+recompiling module NAND2B1X1TAS7
+recompiling module NAND2X4TAS7
+recompiling module NAND3X1TAS7
+recompiling module NAND4B1X1TAS7
+recompiling module NAND4X1TAS7
+recompiling module NOR2B1X1TAS7
+recompiling module NOR2X4TAS7
+recompiling module NOR3B1X1TAS7
+recompiling module NOR3X1TAS7
+recompiling module NOR4B1X1TAS7
+recompiling module NOR4X1TAS7
+recompiling module OAI112X4TAS7
+recompiling module OAI12B2X2TAS7
+recompiling module OAI12X4TAS7
+recompiling module OAI13X1TAS7
+recompiling module OAI22X1TAS7
+recompiling module OR2X1TAS7
+recompiling module XNOR2X2TAS7
+recompiling module XOR2X1TAS7
+recompiling module NAND3B1X1TAS7
+recompiling module mux2_width16_5
+recompiling module prefix_adder_width16_15
+recompiling module tribuf_width16_2
+recompiling module and_gated_width16
+recompiling module or_gated_width16
+recompiling module mux2_width16_2
+recompiling module mux2_width16_0
+recompiling module mux2_width16_3
+recompiling module mux2_width16_4
+recompiling module mux2_width16_1
+recompiling module delay_line_w23_depth4
+recompiling module tb_alu_sync_div
+All of 45 modules done
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv_gl ]; then chmod a-x ../simv_gl; fi
+g++  -o ../simv_gl      -rdynamic  -Wl,-rpath='$ORIGIN'/simv_gl.daidir -Wl,-rpath=./simv_gl.daidir -Wl,-rpath=/usr/synopsys/vcs/X-2025.06-SP2-6/linux64/lib -L/usr/synopsys/vcs/X-2025.06-SP2-6/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o  _1168854_archive_1.so objs/udps/xfhxx.o objs/udps/U6r2c.o objs/udps/LEF81.o objs/udps/gvifj.o objs/udps/Rz0S0.o  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /usr/synopsys/vcs/X-2025.06-SP2-6/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive       _vcs_pli_stub_.o   /usr/synopsys/vcs/X-2025.06-SP2-6/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl
+../simv_gl up to date
+CPU time: 1.235 seconds to compile + .454 seconds to elab + .226 seconds to link
+$finish at simulation time            200030000
+           V C S   S i m u l a t i o n   R e p o r t
+Time: 200030000 ps
+CPU Time:      2.470 seconds;       Data structure size:   0.2Mb
+Sun Oct 25 18:00:20 2026
+[jrueda@synopsys-unis sim_vcs]$

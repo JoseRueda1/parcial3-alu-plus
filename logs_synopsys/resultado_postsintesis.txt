@@ -1,0 +1,4 @@
+Simulacion post-sintesis (netlist de DC a 65 ns + modelo de celdas M31, VCS, +nospecify +notimingchecks)
+Comando: vcs -full64 -sverilog -f files_gl.f -o simv_gl ; ./simv_gl | grep Errores
+Salida observada en la terminal (ver capturas_parte2_synopsys/04_simulacion_postsintesis_0_errores.png):
+Errores: 0  (W=16, STAGES=4, LAT=6)

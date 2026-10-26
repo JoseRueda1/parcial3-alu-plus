@@ -16,14 +16,17 @@ h1,h2{margin-bottom:.3rem}table{border-collapse:collapse;width:100%}td,th{border
 <tr><td>5. Lógica tri-estado</td><td>[enlace pendiente]</td></tr>
 <tr><td>6. Banderas NZCV</td><td>[enlace pendiente]</td></tr>
 <tr><td>7. Instanciación a 16 y 32 bits</td><td>[enlace pendiente]</td></tr></table>
-<h2>Parte 2: ALU+ síncrona de 16 bits</h2>
-<p>El servidor de Synopsys no estuvo disponible, así que usé Vivado como equivalente. Detalles en el <a href="informe/Informe_Parte2_Jose_Rueda.pdf">informe</a>.</p>
+<h2>Parte 2: ALU+ síncrona de 16 bits con Synopsys</h2>
+<p>Informe final: <a href="Informe_Parte2_Synopsys_Jose_Rueda.pdf">Informe_Parte2_Synopsys_Jose_Rueda.pdf</a>. Simulación con VCS y Verdi, síntesis con Design Compiler (reloj de 65 ns, con divisor en pipeline de 4 etapas) y diseño físico con ICC2 (0 DRCs, 0 nets abiertas; GDSII, DEF y netlist).</p>
 <table><tr><th>Inciso</th><th>Video</th></tr>
-<tr><td>Preparación y simulación</td><td>[enlace pendiente]</td></tr>
-<tr><td>Síntesis</td><td>[enlace pendiente]</td></tr>
-<tr><td>Diseño físico</td><td>[enlace pendiente]</td></tr></table>
+<tr><td>Preparación y simulación (VCS y Verdi)</td><td>[enlace pendiente]</td></tr>
+<tr><td>Síntesis (Design Compiler)</td><td>[enlace pendiente]</td></tr>
+<tr><td>Diseño físico (ICC2)</td><td>[enlace pendiente]</td></tr></table>
 <h2>Archivos</h2>
-<ul><li><a href="rtl/">rtl</a>: código SystemVerilog</li><li><a href="tb/">tb</a>: testbenches</li>
-<li><a href="scripts/">scripts</a>: Tcl y XDC</li><li><a href="reportes_parte2/">reportes_parte2</a>: reportes y netlists</li>
-<li><a href="capturas_parte2/">capturas_parte2</a>: capturas</li></ul>
+<ul><li><a href="rtl/">rtl</a>: código SystemVerilog (incluye divider_pipe y alu_sync_div)</li><li><a href="tb/">tb</a>: testbenches</li>
+<li><a href="scripts_synopsys/">scripts_synopsys</a>: Tcl de DC e ICC2</li>
+<li><a href="capturas_parte2_synopsys/">capturas_parte2_synopsys</a>: capturas de Verdi, post-síntesis y layout</li>
+<li><a href="logs_synopsys/">logs_synopsys</a>: salidas de las corridas</li></ul>
+<h2>Respaldo: primera entrega de la Parte 2 (Vivado)</h2>
+<p>Se entregó primero una versión equivalente hecha en Vivado porque el servidor de Synopsys estaba caído. Ver el <a href="Informe_Parte2_Jose_Rueda.pdf">informe de Vivado</a>, <a href="reportes_parte2/">reportes_parte2</a> y <a href="capturas_parte2/">capturas_parte2</a>.</p>
 </body></html>

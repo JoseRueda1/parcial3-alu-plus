@@ -1,0 +1,267 @@
+[jrueda@synopsys-unis sim_vcs]$ cd ~/parcial3-alu-plus
+L=m31/M31LLSC750GL150MS_00.01.000/nldm/M31LLSC750GL150MS_25CTT1P8_ctyp_nldm.lib
+grep -c three_state $L
+42
+[jrueda@synopsys-unis parcial3-alu-plus]$ dc_shell -f dc_alu_sync_div.tcl | tee dc_run.log
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+              Version X-2025.06-SP5-5 for linux64 - Aug 13, 2026
+
+                    Copyright (c) 1988 - 2026 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+      Inc.  This software may only be used in accordance with the terms and
+  conditions of a written license agreement with Synopsys, Inc.  All other use,
+   reproduction, or distribution of this software is strictly prohibited.  By
+   installing, accessing, using, or executing this software, you agree that it
+  will reside on, operate within, and have access to the computers and networks
+    where such software is used ("Host System"), and that Synopsys may access
+     components and data of the Host System as necessary for it to function
+ properly, to authenticate and validate license keys, to verify that it is used
+ only in conformity with the applicable license restrictions, and to communicate
+                 error messages and associated data to Synopsys.
+
+Initializing...
+Current time:       Sun Oct 25 13:53:07 2026
+Hostname:           synopsys-unis
+CPU Model:          Intel(R) Xeon(R) D-2123IT CPU @ 2.20GHz
+CPU Details:        Cores = 8 : Sockets = 1 : Cache Size = 8448 KB : Freq = 2.77 GHz
+OS:                 Linux 5.14.0-687.49.1.el9_8.x86_64
+RAM:                124 GB (Free  98 GB)
+Swap:                31 GB (Free  31 GB)
+Work Filesystem:    /home mounted to /dev/mapper/rl_synopsys_home-home
+Tmp Filesystem:     / mounted to /dev/mapper/rl_synopsys_root-root
+Work Disk:          11169 GB (Free 10592 GB)
+Tmp Disk:           379 GB (Free  78 GB)
+
+CPU Load: 1%, Ram Free: 98 GB, Swap Free: 31 GB, Work Disk Free: 10592 GB, Tmp Disk Free: 78 GB
+# ==========================================================
+# Parcial 3, Parte 2 - Sintesis de alu_sync_div (ALU con division en pipeline) con Design Compiler
+# Libreria: M31LLSC750GL150MS, corner 25C / TT / 1.8 V
+# Se corre desde ~/parcial3-alu-plus con:
+#   dc_shell -f dc_alu_sync_div.tcl | tee dc_run.log
+# ==========================================================
+file mkdir reports_dc
+file mkdir run_dc
+# ----------------------------------------------------------
+# Libreria
+# ----------------------------------------------------------
+set LIBDIR "/home/jrueda/parcial3-alu-plus/m31/M31LLSC750GL150MS_00.01.000/nldm_db"
+/home/jrueda/parcial3-alu-plus/m31/M31LLSC750GL150MS_00.01.000/nldm_db
+set_app_var search_path "$search_path $LIBDIR ./rtl"
+. /usr/synopsys/syn/X-2025.06-SP5-5/libraries/syn /usr/synopsys/syn/X-2025.06-SP5-5/dw/syn_ver /usr/synopsys/syn/X-2025.06-SP5-5/dw/sim_ver /home/jrueda/parcial3-alu-plus/m31/M31LLSC750GL150MS_00.01.000/nldm_db ./rtl
+set_app_var target_library "M31LLSC750GL150MS_25CTT1P8_ctyp_nldm.db"
+M31LLSC750GL150MS_25CTT1P8_ctyp_nldm.db
+set_app_var synthetic_library dw_foundation.sldb
+dw_foundation.sldb
+set_app_var link_library "* $target_library $synthetic_library"
+* M31LLSC750GL150MS_25CTT1P8_ctyp_nldm.db dw_foundation.sldb
+# ----------------------------------------------------------
+# Leer el RTL (orden: de los modulos mas chicos al top)
+# ----------------------------------------------------------
+set_svf run_dc/alu_sync_div.svf
+1
+analyze -format sverilog {mux2.sv prefix_adder.sv multiplier.sv tristate_logic.sv alu.sv divider_pipe.sv alu_sync_div.sv}
+Running PRESTO HDLC
+Compiling source file ./rtl/mux2.sv
+Compiling source file ./rtl/prefix_adder.sv
+Compiling source file ./rtl/multiplier.sv
+Compiling source file ./rtl/tristate_logic.sv
+Compiling source file ./rtl/alu.sv
+Compiling source file ./rtl/divider_pipe.sv
+Compiling source file ./rtl/alu_sync_div.sv
+Presto compilation completed successfully.
+Loading db file '/home/jrueda/parcial3-alu-plus/m31/M31LLSC750GL150MS_00.01.000/nldm_db/M31LLSC750GL150MS_25CTT1P8_ctyp_nldm.db'
+Loading db file '/usr/synopsys/syn/X-2025.06-SP5-5/libraries/syn/dw_foundation.sldb'
+1
+elaborate alu_sync_div
+Loading db file '/usr/synopsys/syn/X-2025.06-SP5-5/libraries/syn/gtech.db'
+Loading db file '/usr/synopsys/syn/X-2025.06-SP5-5/libraries/syn/standard.sldb'
+  Loading link library 'M31LLSC750GL150MS_25CTT1P8_ctyp_nldm'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block in file
+        './rtl/alu_sync_div.sv'
+===========================================================
+|    Line    |  full/ parallel  |      block location     |
+===========================================================
+|     68     |    auto/auto     | always block at line 66 |
+===========================================================
+
+Inferred memory devices in process in routine 'alu_sync_div' in file
+         ./rtl/alu_sync_div.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|     ctrl_r_reg      | Flip-flop |   3   |  Y  | N  | None  | Async | N  |  39  |
+|       a_r_reg       | Flip-flop |  16   |  Y  | N  | None  | Async | N  |  39  |
+|       b_r_reg       | Flip-flop |  16   |  Y  | N  | None  | Async | N  |  39  |
+|        v_reg        | Flip-flop |   1   |  N  | N  | None  | Async | N  |  78  |
+|     result_reg      | Flip-flop |  16   |  Y  | N  | None  | Async | N  |  78  |
+|        n_reg        | Flip-flop |   1   |  N  | N  | None  | Async | N  |  78  |
+|        z_reg        | Flip-flop |   1   |  N  | N  | None  | Async | N  |  78  |
+|        c_reg        | Flip-flop |   1   |  N  | N  | None  | Async | N  |  78  |
+==================================================================================
+Presto compilation completed successfully. (alu_sync_div)
+Module: alu_sync_div, Ports: 57, Input: 37, Output: 20, Inout: 0
+Module: alu_sync_div, Registers: 55, Async set/reset: 55, Sync set/reset: 0
+Information: Module alu_sync_div report end. (ELAB-965)
+Elaborated 1 design.
+Current design is now 'alu_sync_div'.
+Information: Building the design 'alu' instantiated from design 'alu_sync_div' with
+        the parameters "16". (HDL-193)
+Presto compilation completed successfully. (alu_width16)
+Module: alu_width16, Ports: 55, Input: 35, Output: 20, Inout: 0
+Module: alu_width16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module alu_width16 report end. (ELAB-965)
+Information: Building the design 'divider_pipe' instantiated from design 'alu_sync_div' with
+        the parameters "16,4". (HDL-193)
+
+Inferred memory devices in process in routine 'divider_pipe_width16_stages4' in file
+         ./rtl/divider_pipe.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|  etapa[0].dv_q_reg  | Flip-flop |  16   |  Y  | N  | None  | Async | N  |  49  |
+|  etapa[0].x_q_reg   | Flip-flop |  12   |  Y  | N  | None  | Async | N  |  49  |
+| etapa[0].rem_q_reg  | Flip-flop |  16   |  Y  | N  | None  | Async | N  |  49  |
+| etapa[0].quo_q_reg  | Flip-flop |   4   |  Y  | N  | None  | Async | N  |  49  |
+|  etapa[1].dv_q_reg  | Flip-flop |  16   |  Y  | N  | None  | Async | N  |  49  |
+|  etapa[1].x_q_reg   | Flip-flop |   8   |  Y  | N  | None  | Async | N  |  49  |
+| etapa[1].rem_q_reg  | Flip-flop |  16   |  Y  | N  | None  | Async | N  |  49  |
+| etapa[1].quo_q_reg  | Flip-flop |   8   |  Y  | N  | None  | Async | N  |  49  |
+|  etapa[2].dv_q_reg  | Flip-flop |  16   |  Y  | N  | None  | Async | N  |  49  |
+|  etapa[2].x_q_reg   | Flip-flop |   4   |  Y  | N  | None  | Async | N  |  49  |
+| etapa[2].rem_q_reg  | Flip-flop |  16   |  Y  | N  | None  | Async | N  |  49  |
+| etapa[2].quo_q_reg  | Flip-flop |  12   |  Y  | N  | None  | Async | N  |  49  |
+| etapa[3].rem_q_reg  | Flip-flop |  16   |  Y  | N  | None  | Async | N  |  49  |
+| etapa[3].quo_q_reg  | Flip-flop |  16   |  Y  | N  | None  | Async | N  |  49  |
+==================================================================================
+Presto compilation completed successfully. (divider_pipe_width16_stages4)
+Module: divider_pipe_width16_stages4, Ports: 66, Input: 34, Output: 32, Inout: 0
+Module: divider_pipe_width16_stages4, Registers: 176, Async set/reset: 176, Sync set/reset: 0
+Information: Module divider_pipe_width16_stages4 report end. (ELAB-965)
+Information: Building the design 'delay_line' instantiated from design 'alu_sync_div' with
+        the parameters "23,4". (HDL-193)
+
+Inferred memory devices in process in routine 'delay_line_w23_depth4' in file
+         ./rtl/alu_sync_div.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      pipe_reg       | Flip-flop |  92   |  Y  | N  | None  | Async | N  |  9   |
+==================================================================================
+Presto compilation completed successfully. (delay_line_w23_depth4)
+Module: delay_line_w23_depth4, Ports: 48, Input: 25, Output: 23, Inout: 0
+Module: delay_line_w23_depth4, Registers: 92, Async set/reset: 92, Sync set/reset: 0
+Information: Module delay_line_w23_depth4 report end. (ELAB-965)
+Information: Building the design 'mux2' instantiated from design 'alu_width16' with
+        the parameters "16". (HDL-193)
+Presto compilation completed successfully. (mux2_width16)
+Module: mux2_width16, Ports: 49, Input: 33, Output: 16, Inout: 0
+Module: mux2_width16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module mux2_width16 report end. (ELAB-965)
+Information: Building the design 'prefix_adder' instantiated from design 'alu_width16' with
+        the parameters "16". (HDL-193)
+Presto compilation completed successfully. (prefix_adder_width16)
+Module: prefix_adder_width16, Ports: 50, Input: 33, Output: 17, Inout: 0
+Module: prefix_adder_width16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module prefix_adder_width16 report end. (ELAB-965)
+Information: Building the design 'and_gated' instantiated from design 'alu_width16' with
+        the parameters "16". (HDL-193)
+Presto compilation completed successfully. (and_gated_width16)
+Module: and_gated_width16, Ports: 49, Input: 33, Output: 16, Inout: 0
+Module: and_gated_width16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module and_gated_width16 report end. (ELAB-965)
+Information: Building the design 'or_gated' instantiated from design 'alu_width16' with
+        the parameters "16". (HDL-193)
+Presto compilation completed successfully. (or_gated_width16)
+Module: or_gated_width16, Ports: 49, Input: 33, Output: 16, Inout: 0
+Module: or_gated_width16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module or_gated_width16 report end. (ELAB-965)
+Information: Building the design 'multiplier' instantiated from design 'alu_width16' with
+        the parameters "16". (HDL-193)
+Presto compilation completed successfully. (multiplier_width16)
+Module: multiplier_width16, Ports: 64, Input: 32, Output: 32, Inout: 0
+Module: multiplier_width16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module multiplier_width16 report end. (ELAB-965)
+Information: Building the design 'tribuf' instantiated from design 'and_gated_width16' with
+        the parameters "16". (HDL-193)
+
+Inferred tri-state devices in process
+        in routine tribuf_width16 line 7 in file
+                './rtl/tristate_logic.sv'.
+============================================
+| Register Name |       Type       | Width |
+============================================
+|     y_tri     | Tri-State Buffer |  16   |
+============================================
+Presto compilation completed successfully. (tribuf_width16)
+Module: tribuf_width16, Ports: 33, Input: 17, Output: 16, Inout: 0
+Module: tribuf_width16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module tribuf_width16 report end. (ELAB-965)
+1
+link
+
+  Linking design 'alu_sync_div'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (10 designs)              /home/jrueda/parcial3-alu-plus/alu_sync_div.db, etc
+  M31LLSC750GL150MS_25CTT1P8_ctyp_nldm (library) /home/jrueda/parcial3-alu-plus/m31/M31LLSC750GL150MS_00.01.000/nldm_db/M31LLSC750GL150MS_25CTT1P8_ctyp_nldm.db
+  dw_foundation.sldb (library) /usr/synopsys/syn/X-2025.06-SP5-5/libraries/syn/dw_foundation.sldb
+
+Information: Summary of messages issued during linking: (LINK-1806)
+No messages were issued during linking.
+1
+check_design > reports_dc/check_design.rpt
+# ----------------------------------------------------------
+# Restricciones (equivalente del XDC de Vivado)
+# Periodo de reloj mayor a 20 ns (25 ns). Si hay violaciones, subir clk_val
+# ----------------------------------------------------------
+set clk_val 25
+25
+create_clock -name clk -period $clk_val [get_ports clk]
+1
+set_clock_uncertainty -setup [expr {$clk_val*0.1}] [get_clocks clk]
+1
+set_clock_transition -max [expr {$clk_val*0.05}] [get_clocks clk]
+1
+set data_inputs [remove_from_collection [all_inputs] [get_ports clk]]
+{reset a[15] a[14] a[13] a[12] a[11] a[10] a[9] a[8] a[7] a[6] a[5] a[4] a[3] a[2] a[1] a[0] b[15] b[14] b[13] b[12] b[11] b[10] b[9] b[8] b[7] b[6] b[5] b[4] b[3] b[2] b[1] b[0] alu_control[2] alu_control[1] alu_control[0]}
+set_input_delay -max [expr {$clk_val*0.2}]  -clock [get_clocks clk] $data_inputs
+1
+set_input_delay -min [expr {$clk_val*0.05}] -clock [get_clocks clk] $data_inputs
+1
+set_output_delay -max [expr {$clk_val*0.2}]  -clock [get_clocks clk] [all_outputs]
+1
+set_output_delay -min 0 -clock [get_clocks clk] [all_outputs]
+1
+set_load -max 0.04 [all_outputs]
+1
+group_path -name INREG  -from $data_inputs
+1
+group_path -name REGOUT -to [all_outputs]
+1
+# ----------------------------------------------------------
+# Compilacion (se mantiene la jerarquia para ver el area por modulo)
+# ----------------------------------------------------------
+set_fix_multiple_port_nets -all -buffer_constants
+1
+compile_ultra -no_autoungroup
+Information: Performing leakage power optimization. (PWR-850)
+CPU Load: 1%, Ram Free: 98 GB, Swap Free: 31 GB, Work Disk Free: 10592 GB, Tmp Disk Free: 78 GB
+Analyzing: "/home/jrueda/parcial3-alu-plus/m31/M31LLSC750GL150MS_00.01.000/nldm_db/M31LLSC750GL150MS_25CTT1P8_ctyp_nldm.db"
+

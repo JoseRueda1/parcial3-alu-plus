@@ -1,0 +1,142 @@
+Cut layer CNT has invalid minimum width specified
+Cell Min-Routing-Layer = METAL1
+Cell Max-Routing-Layer = METAL5
+Turn off antenna since no rule is specified
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+Warning: Cannot find a default contact code for layer CNT. (ZRT-022)
+Warning: Port GNDK of cell floorplan is unplaced.  This may impact routing result. (ZRT-740)
+Warning: Port VCCK of cell floorplan is unplaced.  This may impact routing result. (ZRT-740)
+Warning: Ignore 2 top cell ports with no pins. (ZRT-027)
+Info: number of net_type_blockage: 0 
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Via on layer (VIA4) needs more than one tracks
+Warning: Layer METAL4 default pitch 0.480 may be too small to handle up/down via. Note, that minimum requirements are "wire/via-down 0.480" & "wire/via-up 0.520". (ZRT-026)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 8.07 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 8.07 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+
+
+Start checking for open nets ... 
+
+Total number of nets = 3645, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+
+Check 3645 nets, 0 have Errors
+
+[CHECK OPEN NETS] Elapsed real time: 0:00:00 
+[CHECK OPEN NETS] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[CHECK OPEN NETS] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[CHECK OPEN NETS] Total (MB): Used    0  Alloctr    0  Proc 8268 
+Printing options for 'route.common.*'
+
+Printing options for 'route.detail.*'
+
+Printing options for 'route.auto_via_ladder.*'
+
+
+Begin full DRC check ...
+
+Information: Using 4 threads for routing. (ZRT-444)
+Checked	1/9 Partitions, Violations =	1
+Checked	2/9 Partitions, Violations =	1
+Checked	3/9 Partitions, Violations =	1
+Checked	4/9 Partitions, Violations =	1
+Checked	5/9 Partitions, Violations =	1
+Checked	6/9 Partitions, Violations =	1
+Checked	7/9 Partitions, Violations =	1
+Checked	8/9 Partitions, Violations =	1
+Checked	9/9 Partitions, Violations =	2
+[DRC CHECK] Elapsed real time: 0:00:00 
+[DRC CHECK] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
+[DRC CHECK] Stage (MB): Used    0  Alloctr    0  Proc   32 
+[DRC CHECK] Total (MB): Used    0  Alloctr    0  Proc 8300 
+Warning: No antenna rules defined, Skip antenna analysis. (ZRT-309)
+
+DRC-SUMMARY:
+	@@@@@@@ TOTAL VIOLATIONS =	2
+	Diff net spacing : 1
+	Short : 1
+
+Information: The app option "route.detail.report_soft_drc_separately" will be on-by-default in future release. (ZRT-807)
+	@@@@@@@ TOTAL SOFT VIOLATIONS =	0
+
+
+Total Wire Length =                    89456 micron
+Total Number of Contacts =             22769
+Total Number of Wires =                23047
+Total Number of PtConns =              2121
+Total Number of Routed Wires =       22501
+Total Routed Wire Length =           89024 micron
+Total Number of Routed Contacts =       22769
+	Layer              METAL1 :       3584 micron
+	Layer              METAL2 :      43930 micron
+	Layer              METAL3 :      36286 micron
+	Layer              METAL4 :       5175 micron
+	Layer              METAL5 :         49 micron
+	Via    V45_X_V1S1E11(rot) :          4
+	Via         V34_X_V1S1E11 :        575
+	Via         V23_X_V1S1E11 :      10754
+	Via         V12_X_V1S1E11 :       9395
+	Via    V12_X_V1S1E11(rot) :         28
+	Via        V12_HH_V1S1E11 :          6
+	Via   V12_HH_V1S1E11(rot) :       2007
+
+ 
+Redundant via conversion report:
+--------------------------------
+
+  Total optimized via conversion rate =  0.00% (0 / 22769 vias)
+ 
+    Layer VIA1       =  0.00% (0      / 11436   vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (11436   vias)
+    Layer VIA2       =  0.00% (0      / 10754   vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (10754   vias)
+    Layer VIA3       =  0.00% (0      / 575     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (575     vias)
+    Layer VIA4       =  0.00% (0      / 4       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (4       vias)
+ 
+  Total double via conversion rate    =  0.00% (0 / 22769 vias)
+ 
+    Layer VIA1       =  0.00% (0      / 11436   vias)
+    Layer VIA2       =  0.00% (0      / 10754   vias)
+    Layer VIA3       =  0.00% (0      / 575     vias)
+    Layer VIA4       =  0.00% (0      / 4       vias)
+ 
+  The optimized via conversion rate based on total routed via count =  0.00% (0 / 22769 vias)
+ 
+    Layer VIA1       =  0.00% (0      / 11436   vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (11436   vias)
+    Layer VIA2       =  0.00% (0      / 10754   vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (10754   vias)
+    Layer VIA3       =  0.00% (0      / 575     vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (575     vias)
+    Layer VIA4       =  0.00% (0      / 4       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (4       vias)
+ 
+
+
+Verify Summary:
+
+
+Total number of nets = 3645, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                 0 ports without pins of 0 cells connected to 0 nets
+                                 0 ports of 0 cover cells connected to 0 non-pg nets
+Total number of DRCs = 2
+Total number of antenna violations = no antenna rules defined
+Total number of tie to rail violations = not checked
+Total number of tie to rail directly violations = not checked
+
+Total number of DRCs on METAL3 and below = 2
+
+0

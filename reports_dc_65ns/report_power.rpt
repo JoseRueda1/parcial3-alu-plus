@@ -1,0 +1,97 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : alu_sync_div
+Version: X-2025.06-SP5-5
+Date   : Sun Oct 25 14:18:13 2026
+****************************************
+
+
+Library(s) Used:
+
+    M31LLSC750GL150MS_25CTT1P8_ctyp_nldm (File: /home/jrueda/parcial3-alu-plus/m31/M31LLSC750GL150MS_00.01.000/nldm_db/M31LLSC750GL150MS_25CTT1P8_ctyp_nldm.db)
+
+
+Operating Conditions: 25CTT1P8   Library: M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+alu_sync_div           MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+alu_width16            MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+divider_pipe_width16_stages4
+                       MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+delay_line_w23_depth4  MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+mux2_width16_5         MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_15
+                       MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+and_gated_width16      MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+or_gated_width16       MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+multiplier_width16     MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+mux2_width16_2         MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+tribuf_width16_3       MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_14
+                       MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_13
+                       MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_12
+                       MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_11
+                       MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_10
+                       MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_9 MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_8 MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_7 MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_6 MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_5 MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_4 MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_3 MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_2 MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_1 MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+prefix_adder_width16_0 MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+mux2_width16_0         MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+mux2_width16_3         MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+mux2_width16_4         MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+tribuf_width16_0       MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+tribuf_width16_1       MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+tribuf_width16_2       MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+mux2_width16_1         MW0K              M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+
+
+Global Operating Voltage = 1.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 225.3698 uW   (81%)
+  Net Switching Power  =  53.2842 uW   (19%)
+                         ---------
+Total Dynamic Power    = 278.6540 uW  (100%)
+
+Cell Leakage Power     =   1.8235 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.1537            0.0000            0.0000            0.1537  (  55.15%)  i
+register       1.6635e-02        7.2169e-03          341.1540        2.3853e-02  (   8.56%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  5.5051e-02        4.6067e-02        1.4824e+03            0.1011  (  36.29%)
+--------------------------------------------------------------------------------------------------
+Total              0.2254 mW     5.3284e-02 mW     1.8235e+03 pW         0.2787 mW
+1

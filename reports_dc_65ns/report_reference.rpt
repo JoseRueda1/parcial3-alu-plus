@@ -1,0 +1,994 @@
+ 
+****************************************
+Report : reference
+Design : alu_sync_div
+Version: X-2025.06-SP5-5
+Date   : Sun Oct 25 14:18:13 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND3X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+AOI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+AOI22X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+AOI222X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 24.191999      15    362.879992  
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       3     29.030399  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      21    135.475200  
+DFFRBQX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 51.609600      48   2477.260803  n
+DFFRBQX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 54.835201       4    219.340805  n
+DFFRBQX4TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 61.286400       3    183.859200  n
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+NAND3B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NAND3X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NAND4X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+NOR3X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NOR4X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       7    112.896002  
+OAI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       2     32.256001  
+OAI112X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 14.515200       1     14.515200  
+alu_width16                   18034.329655       1  18034.329655  h, n
+delay_line_w23_depth4          4819.046406       1   4819.046406  h, n
+divider_pipe_width16_stages4  29907.763256       1  29907.763256  h, n
+-----------------------------------------------------------------------------
+Total 21 references                                 56454.451319
+
+****************************************
+Design: alu_width16 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+AOI112X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 14.515200       1     14.515200  
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       3     29.030399  
+CLKBUFX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       6     38.707200  
+CLKINVX8TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 29.030399       1     29.030399  
+INVX2TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NOR2B1X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+NOR3B1X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NOR3X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       2     25.804800  
+NOR4B1X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 19.353600       1     19.353600  
+NOR4X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+OAI112X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 14.515200       1     14.515200  
+OR2X1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+OR4X1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 19.353600       2     38.707199  
+and_gated_width16               809.625612       1    809.625612  h, n
+multiplier_width16            13116.902415       1  13116.902415  h
+mux2_width16_0                  395.135999       1    395.135999  h
+mux2_width16_1                  225.792000       1    225.792000  h
+mux2_width16_2                  229.017600       1    229.017600  h
+mux2_width16_3                  335.462402       1    335.462402  h
+mux2_width16_4                  345.139202       1    345.139202  h
+mux2_width16_5                  293.529613       1    293.529613  h
+or_gated_width16                809.625612       1    809.625612  h, n
+prefix_adder_width16_15        1138.636802       1   1138.636802  h
+-----------------------------------------------------------------------------
+Total 27 references                                 18034.329655
+
+****************************************
+Design: and_gated_width16 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400      16    206.438400  
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+tribuf_width16_2                296.755206       1    296.755206  h, n
+tribuf_width16_3                296.755206       1    296.755206  h, n
+-----------------------------------------------------------------------------
+Total 4 references                                    809.625612
+
+****************************************
+Design: tribuf_width16_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      18    116.121600  
+TRIINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 11.289600      16    180.633606  n
+-----------------------------------------------------------------------------
+Total 2 references                                    296.755206
+
+****************************************
+Design: tribuf_width16_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      18    116.121600  
+TRIINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 11.289600      16    180.633606  n
+-----------------------------------------------------------------------------
+Total 2 references                                    296.755206
+
+****************************************
+Design: multiplier_width16 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400      85   1096.704001  
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       3     29.030399  
+CLKBUFX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      19    122.572800  
+CLKINVX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       2     12.902400  
+INVX2TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       4     38.707199  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       5     80.640001  
+NOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      41    396.748791  
+NOR2X2TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+prefix_adder_width16_0           29.030401       1     29.030401  h
+prefix_adder_width16_1          111.283201       1    111.283201  h
+prefix_adder_width16_2          270.950401       1    270.950401  h
+prefix_adder_width16_3          453.196801       1    453.196801  h
+prefix_adder_width16_4          454.809601       1    454.809601  h
+prefix_adder_width16_5          499.968000       1    499.968000  h
+prefix_adder_width16_6          711.244799       1    711.244799  h
+prefix_adder_width16_7          735.436801       1    735.436801  h
+prefix_adder_width16_8          874.137602       1    874.137602  h
+prefix_adder_width16_9          956.390405       1    956.390405  h
+prefix_adder_width16_10        1116.057602       1   1116.057602  h
+prefix_adder_width16_11        1107.993601       1   1107.993601  h
+prefix_adder_width16_12        1220.889603       1   1220.889603  h
+prefix_adder_width16_13        1275.724802       1   1275.724802  h
+prefix_adder_width16_14        1457.971202       1   1457.971202  h
+-----------------------------------------------------------------------------
+Total 26 references                                 13116.902415
+
+****************************************
+Design: prefix_adder_width16_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       1      6.451200  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+-----------------------------------------------------------------------------
+Total 2 references                                     29.030401
+
+****************************************
+Design: prefix_adder_width16_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 17.740801       1     17.740801  
+AOI22X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       3     19.353600  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       1      6.451200  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       3     29.030399  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+-----------------------------------------------------------------------------
+Total 6 references                                    111.283201
+
+****************************************
+Design: prefix_adder_width16_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       2     25.804800  
+AOI22B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 17.740801       1     17.740801  
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       3     19.353600  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       3     19.353600  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       4     38.707199  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+OAI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       2     25.804800  
+OAI112X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 14.515200       1     14.515200  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+XOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+-----------------------------------------------------------------------------
+Total 13 references                                   270.950401
+
+****************************************
+Design: prefix_adder_width16_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI12B2X2TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       9     58.060800  
+CLKINVX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       5     64.512000  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       6     58.060799  
+NAND3X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       2     25.804800  
+NAND4X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NOR2B1X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+OAI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       4     51.609600  
+OAI112X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 14.515200       3     43.545599  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       2     45.158401  
+XOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+-----------------------------------------------------------------------------
+Total 13 references                                   453.196801
+
+****************************************
+Design: prefix_adder_width16_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       7     45.158400  
+CLKINVX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       1      6.451200  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      10     96.767998  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       2     32.256001  
+NAND3B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NOR2X4TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 29.030399       1     29.030399  
+OAI12B2X2TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+OAI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       2     25.804800  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       3     67.737602  
+XNOR2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 25.804800       3     77.414400  
+-----------------------------------------------------------------------------
+Total 13 references                                   454.809601
+
+****************************************
+Design: prefix_adder_width16_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      17    109.670400  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       1      6.451200  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      18    174.182396  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NAND3X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+OAI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       5    112.896004  
+XNOR2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 25.804800       1     25.804800  
+-----------------------------------------------------------------------------
+Total 10 references                                   499.968000
+
+****************************************
+Design: prefix_adder_width16_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+AOI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+CLKBUFX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+CLKBUFX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      12     77.414400  
+CLKINVX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       3     19.353600  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       2     25.804800  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      18    174.182396  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       2     32.256001  
+NAND3X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       2     25.804800  
+NAND4X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+NOR2X2TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NOR2X4TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 29.030399       1     29.030399  
+OAI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 24.191999       1     24.191999  
+OAI112X2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 29.030399       1     29.030399  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       5    112.896004  
+XOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+-----------------------------------------------------------------------------
+Total 20 references                                   711.244799
+
+****************************************
+Design: prefix_adder_width16_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      15     96.768000  
+CLKINVX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+INVX2TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      24    232.243195  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       8    129.024002  
+NAND3B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NAND3X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+OAI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       2     32.256001  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       6    135.475204  
+XNOR2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 25.804800       1     25.804800  
+-----------------------------------------------------------------------------
+Total 12 references                                   735.436801
+
+****************************************
+Design: prefix_adder_width16_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      11     70.963200  
+CLKINVX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       5     48.383999  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       4     25.804800  
+INVX2TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      24    232.243195  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000      11    177.408003  
+NAND3X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       2     25.804800  
+NAND4X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+NOR2X2TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+OAI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       3     48.384001  
+OAI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       7    158.054405  
+-----------------------------------------------------------------------------
+Total 14 references                                   874.137602
+
+****************************************
+Design: prefix_adder_width16_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       2     25.804800  
+AOI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       2     45.158401  
+BUFX2TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      17    109.670400  
+CLKINVX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       4     25.804800  
+INVX2TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      22    212.889595  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000      11    177.408003  
+NAND3B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+NOR2X4TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 29.030399       1     29.030399  
+OAI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+OAI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 24.191999       1     24.191999  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       8    180.633606  
+XOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       2     45.158401  
+-----------------------------------------------------------------------------
+Total 16 references                                   956.390405
+
+****************************************
+Design: prefix_adder_width16_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       2     25.804800  
+AOI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+CLKBUFX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      22    141.926400  
+CLKINVX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       5     32.256000  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       4     51.609600  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      33    319.334393  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       7    112.896002  
+NAND3X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       4     51.609600  
+NAND4X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NOR2X2TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       3     48.384001  
+OAI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+OAI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+OAI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 24.191999       1     24.191999  
+OAI112X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 14.515200       1     14.515200  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       5    112.896004  
+XOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       4     90.316803  
+-----------------------------------------------------------------------------
+Total 18 references                                  1116.057602
+
+****************************************
+Design: prefix_adder_width16_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+AOI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       3     38.707200  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      14     90.316800  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       4     25.804800  
+INVX2TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       3     38.707200  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      28    270.950394  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       6     96.768002  
+NOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       3     29.030399  
+NOR2X2TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NOR2X4TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 29.030399       1     29.030399  
+OAI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       2     32.256001  
+OAI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       4     51.609600  
+OAI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 24.191999       1     24.191999  
+OR2X1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       4     51.609600  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       8    180.633606  
+XOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       2     45.158401  
+XOR3X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 38.707199       1     38.707199  
+-----------------------------------------------------------------------------
+Total 19 references                                  1107.993601
+
+****************************************
+Design: prefix_adder_width16_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       3     38.707200  
+AOI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      20    129.024000  
+CLKINVX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       7     45.158400  
+INVX2TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      38    367.718391  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       6     96.768002  
+NAND3B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NAND3X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+NOR2X2TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       4     64.512001  
+OAI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+OAI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       4     51.609600  
+OAI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 24.191999       1     24.191999  
+OR2X1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       2     25.804800  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201      11    248.371208  
+XOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+-----------------------------------------------------------------------------
+Total 18 references                                  1220.889603
+
+****************************************
+Design: prefix_adder_width16_13 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       2     25.804800  
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       5     64.512000  
+AOI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      20    129.024000  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       2     12.902400  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       3     38.707200  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      28    270.950394  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       2     32.256001  
+NAND3X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      13    125.798397  
+NOR2X2TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       4     64.512001  
+OAI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       6     77.414400  
+OAI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 24.191999       3     72.575998  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       7    158.054405  
+XOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       7    158.054405  
+-----------------------------------------------------------------------------
+Total 16 references                                  1275.724802
+
+****************************************
+Design: prefix_adder_width16_14 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       4     51.609600  
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400      11    141.926400  
+AOI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      24    154.828800  
+CLKINVX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       1      6.451200  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      23    222.566395  
+NAND2X4TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 29.030399       2     58.060799  
+NOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      21    203.212795  
+NOR2X2TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+OAI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+OAI12B2X2TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       1     22.579201  
+OAI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       8    103.219200  
+OAI12X4TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 43.545601       1     43.545601  
+OAI112X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 14.515200       1     14.515200  
+OR2X1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       5    112.896004  
+XOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201      10    225.792007  
+-----------------------------------------------------------------------------
+Total 19 references                                  1457.971202
+
+****************************************
+Design: mux2_width16_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       2     12.902400  
+MUX2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 20.966400       9    188.697601  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800      14    135.475197  
+OAI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       2     32.256001  
+OAI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+-----------------------------------------------------------------------------
+Total 6 references                                    395.135999
+
+****************************************
+Design: mux2_width16_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       6     77.414400  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       2     12.902400  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       1      6.451200  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NOR2B1X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       9    116.121600  
+-----------------------------------------------------------------------------
+Total 5 references                                    225.792000
+
+****************************************
+Design: mux2_width16_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       6     77.414400  
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       1      6.451200  
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       1      6.451200  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NOR2B1X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       9    116.121600  
+-----------------------------------------------------------------------------
+Total 6 references                                    229.017600
+
+****************************************
+Design: mux2_width16_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+MUX2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 20.966400      16    335.462402  
+-----------------------------------------------------------------------------
+Total 1 references                                    335.462402
+
+****************************************
+Design: mux2_width16_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+MUX2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 20.966400      16    335.462402  
+-----------------------------------------------------------------------------
+Total 2 references                                    345.139202
+
+****************************************
+Design: mux2_width16_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 17.740801      16    283.852814  
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+-----------------------------------------------------------------------------
+Total 2 references                                    293.529613
+
+****************************************
+Design: or_gated_width16 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       1      9.676800  
+OR2X1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400      16    206.438400  
+tribuf_width16_0                296.755206       1    296.755206  h, n
+tribuf_width16_1                296.755206       1    296.755206  h, n
+-----------------------------------------------------------------------------
+Total 4 references                                    809.625612
+
+****************************************
+Design: tribuf_width16_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      18    116.121600  
+TRIINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 11.289600      16    180.633606  n
+-----------------------------------------------------------------------------
+Total 2 references                                    296.755206
+
+****************************************
+Design: tribuf_width16_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      18    116.121600  
+TRIINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 11.289600      16    180.633606  n
+-----------------------------------------------------------------------------
+Total 2 references                                    296.755206
+
+****************************************
+Design: prefix_adder_width16_15 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200      18    116.121600  
+FAX1TAS7           M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 59.673599      10    596.735992  r
+NOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       6     58.060799  
+OAI22X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       6     96.768002  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       6    135.475204  
+XOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201       6    135.475204  
+-----------------------------------------------------------------------------
+Total 6 references                                   1138.636802
+
+****************************************
+Design: delay_line_w23_depth4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       3     29.030399  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       2     12.902400  
+DFFRBQX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 51.609600      90   4644.864006  n
+DFFRBQX4TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 61.286400       1     61.286400  n
+DFFRSBQX2TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 64.512001       1     64.512001  n
+TIE1X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       1      6.451200  
+-----------------------------------------------------------------------------
+Total 6 references                                   4819.046406
+
+****************************************
+Design: divider_pipe_width16_stages4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400      15    193.536000  
+AND2X2TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+AND3X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       7    112.896002  
+AND4X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 19.353600       1     19.353600  
+AOI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       2     32.256001  
+AOI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400     127   1638.604802  
+AOI22B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 17.740801       5     88.704004  
+AOI22X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000      46    741.888012  
+AOI112X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 14.515200       2     29.030399  
+BUFX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       8     77.414398  
+CLKINVX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200     371   2393.395203  
+CLKINVX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       2     19.353600  
+DFFRBQX1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 51.609600     154   7947.878410  n
+DFFRBQX2TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 54.835201       2    109.670403  n
+INVX1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  6.451200       1      6.451200  
+INVX2TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800       3     29.030399  
+MUX2BX1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 17.740801       1     17.740801  
+MUX2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 20.966400     141   2956.262421  
+MUX2X2TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 24.191999       2     48.383999  
+NAND2B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400      18    232.243200  
+NAND2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800     333   3222.374325  
+NAND2X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       1     16.128000  
+NAND3B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       3     48.384001  
+NAND3X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400      32    412.876801  
+NAND4B1X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 19.353600       4     77.414398  
+NAND4X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000      30    483.840008  
+NOR2B1X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+NOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                  9.676800     194   1877.299156  
+NOR3X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400       1     12.902400  
+OAI12B2X1TAS7      M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       7    112.896002  
+OAI12X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400     124   1599.897602  
+OAI12X2TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 24.191999       1     24.191999  
+OAI12X4TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 43.545601       1     43.545601  
+OAI13X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       3     48.384001  
+OAI22X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 16.128000       4     64.512001  
+OAI112X1TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 14.515200      47    682.214384  
+OAI112X4TAS7       M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 53.222401       2    106.444801  
+OR2X1TAS7          M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 12.902400      52    670.924801  
+XNOR2X1TAS7        M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201      57   1287.014442  
+XOR2X1TAS7         M31LLSC750GL150MS_25CTT1P8_ctyp_nldm
+                                 22.579201     106   2393.395279  
+-----------------------------------------------------------------------------
+Total 40 references                                 29907.763256
+1

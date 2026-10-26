@@ -1,0 +1,224 @@
+ 
+****************************************
+check_design summary:
+Version:     X-2025.06-SP5-5
+Date:        Sun Oct 25 14:17:25 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Shorted outputs (LINT-31)                                       1
+
+Cells                                                              67
+    Cells do not drive (LINT-1)                                    16
+    Connected to power or ground (LINT-32)                         48
+    Nets connected to multiple pins on same cell (LINT-33)          3
+
+Nets                                                               16
+    Unloaded nets (LINT-2)                                         16
+
+Tristate                                                           64
+    Single tristate driver drives an input pin (LINT-63)           64
+--------------------------------------------------------------------------------
+
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_17' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_19' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_21' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_23' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_25' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_27' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_29' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_31' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_33' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_35' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_37' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_39' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_41' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_43' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_45' does not drive any nets. (LINT-1)
+Warning: In design 'divider_pipe_width16_stages4', cell 'B_47' does not drive any nets. (LINT-1)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[16]' driven by pin 'u_alu/u_mul/p[16]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[17]' driven by pin 'u_alu/u_mul/p[17]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[18]' driven by pin 'u_alu/u_mul/p[18]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[19]' driven by pin 'u_alu/u_mul/p[19]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[20]' driven by pin 'u_alu/u_mul/p[20]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[21]' driven by pin 'u_alu/u_mul/p[21]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[22]' driven by pin 'u_alu/u_mul/p[22]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[23]' driven by pin 'u_alu/u_mul/p[23]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[24]' driven by pin 'u_alu/u_mul/p[24]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[25]' driven by pin 'u_alu/u_mul/p[25]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[26]' driven by pin 'u_alu/u_mul/p[26]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[27]' driven by pin 'u_alu/u_mul/p[27]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[28]' driven by pin 'u_alu/u_mul/p[28]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[29]' driven by pin 'u_alu/u_mul/p[29]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[30]' driven by pin 'u_alu/u_mul/p[30]' has no loads. (LINT-2)
+Warning: In design 'alu_sync_div', net 'u_alu/prod[31]' driven by pin 'u_alu/u_mul/p[31]' has no loads. (LINT-2)
+Warning: In design 'alu_width16', output port 'result[15]' is connected directly to output port 'n'. (LINT-31)
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[15]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[14]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[13]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[12]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[11]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[10]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[9]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[8]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[7]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[6]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[5]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[4]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[3]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[2]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[1]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[0]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[15]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[14]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[13]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[12]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[11]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[10]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[9]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[8]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[7]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[6]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[5]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[4]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[3]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[2]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[1]' is connected to logic 0. 
+Warning: In design 'alu_width16', a pin on submodule 'm3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd1[0]' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[1].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[15]' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[1].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[2].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[3].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[4].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[5].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[6].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[7].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[8].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[9].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[10].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[11].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[12].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[13].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[14].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'multiplier_width16', a pin on submodule 'fila[15].sumador' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cin' is connected to logic 0. 
+Warning: In design 'alu_width16', the same net is connected to more than one pin on submodule 'm2'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'd1[15]', 'd1[14]'', 'd1[13]', 'd1[12]', 'd1[11]', 'd1[10]', 'd1[9]', 'd1[8]', 'd1[7]', 'd1[6]', 'd1[5]', 'd1[4]', 'd1[3]', 'd1[2]', 'd1[1]', 'd1[0]'.
+Warning: In design 'alu_width16', the same net is connected to more than one pin on submodule 'm3'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'd1[15]', 'd1[14]'', 'd1[13]', 'd1[12]', 'd1[11]', 'd1[10]', 'd1[9]', 'd1[8]', 'd1[7]', 'd1[6]', 'd1[5]', 'd1[4]', 'd1[3]', 'd1[2]', 'd1[1]', 'd1[0]'.
+Warning: In design 'multiplier_width16', the same net is connected to more than one pin on submodule 'fila[1].sumador'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'a[15]', 'cin''.
+Warning: Net 'u_alu/u_and/buf_b/y[0]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[7]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[8]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[9]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[10]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[11]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[12]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[13]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[14]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/buf_b/y[15]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[0]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[7]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[8]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[9]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[10]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[11]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[12]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[13]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[14]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_and/a_bus[15]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[0]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[7]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[8]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[9]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[10]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[11]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[12]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[13]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[14]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_a/y[15]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[0]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[7]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[8]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[9]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[10]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[11]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[12]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[13]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[14]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'u_alu/u_or/buf_b/y[15]' has a single tri-state driver.  (LINT-63)
+1

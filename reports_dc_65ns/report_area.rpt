@@ -1,0 +1,75 @@
+ 
+****************************************
+Report : area
+Design : alu_sync_div
+Version: X-2025.06-SP5-5
+Date   : Sun Oct 25 14:18:13 2026
+****************************************
+
+Library(s) Used:
+
+    M31LLSC750GL150MS_25CTT1P8_ctyp_nldm (File: /home/jrueda/parcial3-alu-plus/m31/M31LLSC750GL150MS_00.01.000/nldm_db/M31LLSC750GL150MS_25CTT1P8_ctyp_nldm.db)
+
+Number of ports:                         1614
+Number of nets:                          4746
+Number of cells:                         3628
+Number of combinational cells:           3229
+Number of sequential cells:               367
+Number of macros/black boxes:               0
+Number of buf/inv:                        824
+Number of references:                      21
+
+Combinational area:              40023.244868
+Buf/Inv area:                     5583.513590
+Noncombinational area:           16431.206451
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 56454.451319
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ----------------------------
+alu_sync_div                      56454.4513    100.0    812.8512   2880.4608  0.0000  alu_sync_div
+u_alu                             18034.3297     31.9    335.4624      0.0000  0.0000  alu_width16
+u_alu/m0                            345.1392      0.6    345.1392      0.0000  0.0000  mux2_width16_4
+u_alu/m1                            335.4624      0.6    335.4624      0.0000  0.0000  mux2_width16_3
+u_alu/m2                            229.0176      0.4    229.0176      0.0000  0.0000  mux2_width16_2
+u_alu/m3                            225.7920      0.4    225.7920      0.0000  0.0000  mux2_width16_1
+u_alu/m4                            395.1360      0.7    395.1360      0.0000  0.0000  mux2_width16_0
+u_alu/mux_b                         293.5296      0.5    293.5296      0.0000  0.0000  mux2_width16_5
+u_alu/sumador                      1138.6368      2.0   1138.6368      0.0000  0.0000  prefix_adder_width16_15
+u_alu/u_and                         809.6256      1.4    216.1152      0.0000  0.0000  and_gated_width16
+u_alu/u_and/buf_a                   296.7552      0.5    116.1216    180.6336  0.0000  tribuf_width16_3
+u_alu/u_and/buf_b                   296.7552      0.5    116.1216    180.6336  0.0000  tribuf_width16_2
+u_alu/u_mul                       13116.9024     23.2   1841.8176      0.0000  0.0000  multiplier_width16
+u_alu/u_mul/fila[10].sumador        499.9680      0.9    499.9680      0.0000  0.0000  prefix_adder_width16_5
+u_alu/u_mul/fila[11].sumador        454.8096      0.8    454.8096      0.0000  0.0000  prefix_adder_width16_4
+u_alu/u_mul/fila[12].sumador        453.1968      0.8    453.1968      0.0000  0.0000  prefix_adder_width16_3
+u_alu/u_mul/fila[13].sumador        270.9504      0.5    270.9504      0.0000  0.0000  prefix_adder_width16_2
+u_alu/u_mul/fila[14].sumador        111.2832      0.2    111.2832      0.0000  0.0000  prefix_adder_width16_1
+u_alu/u_mul/fila[15].sumador         29.0304      0.1     29.0304      0.0000  0.0000  prefix_adder_width16_0
+u_alu/u_mul/fila[1].sumador        1457.9712      2.6   1457.9712      0.0000  0.0000  prefix_adder_width16_14
+u_alu/u_mul/fila[2].sumador        1275.7248      2.3   1275.7248      0.0000  0.0000  prefix_adder_width16_13
+u_alu/u_mul/fila[3].sumador        1220.8896      2.2   1220.8896      0.0000  0.0000  prefix_adder_width16_12
+u_alu/u_mul/fila[4].sumador        1107.9936      2.0   1107.9936      0.0000  0.0000  prefix_adder_width16_11
+u_alu/u_mul/fila[5].sumador        1116.0576      2.0   1116.0576      0.0000  0.0000  prefix_adder_width16_10
+u_alu/u_mul/fila[6].sumador         956.3904      1.7    956.3904      0.0000  0.0000  prefix_adder_width16_9
+u_alu/u_mul/fila[7].sumador         874.1376      1.5    874.1376      0.0000  0.0000  prefix_adder_width16_8
+u_alu/u_mul/fila[8].sumador         735.4368      1.3    735.4368      0.0000  0.0000  prefix_adder_width16_7
+u_alu/u_mul/fila[9].sumador         711.2448      1.3    711.2448      0.0000  0.0000  prefix_adder_width16_6
+u_alu/u_or                          809.6256      1.4    216.1152      0.0000  0.0000  or_gated_width16
+u_alu/u_or/buf_a                    296.7552      0.5    116.1216    180.6336  0.0000  tribuf_width16_1
+u_alu/u_or/buf_b                    296.7552      0.5    116.1216    180.6336  0.0000  tribuf_width16_0
+u_delay                            4819.0464      8.5     48.3840   4770.6624  0.0000  delay_line_w23_depth4
+u_div                             29907.7633     53.0  21850.2144   8057.5488  0.0000  divider_pipe_width16_stages4
+--------------------------------  ----------  -------  ----------  ----------  ------  ----------------------------
+Total                                                  40023.2449  16431.2065  0.0000
+
+1
